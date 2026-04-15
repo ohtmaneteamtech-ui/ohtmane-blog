@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohtmane Tech | المدونة الشخصية</title>
+    <!-- استدعاء خط عربي جميل من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* إعدادات عامة */
+        :root {
+            --primary-color: #2563eb; /* لون أزرق عصري */
+            --bg-color: #f8fafc;      /* خلفية فاتحة جداً */
+            --card-bg: #ffffff;       /* خلفية البطاقات */
+            --text-color: #1e293b;    /* لون النص */
+            --secondary-text: #64748b; /* لون النص الثانوي */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* تنسيق الهيدر (القائمة العلوية) */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* قسم الترحيب (Hero Section) */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* شبكة المقالات */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        /* بطاقة المقال */
+        .post-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd; /* لون مؤقت بدل الصورة */
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-date {
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .post-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+        }
+
+        .post-excerpt {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 16px;            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* الفوتر (تذييل الصفحة) */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid #e2e8f0;
+            margin-top: auto;
+        }
+
+        /* للتجاوب مع الهواتف الصغيرة */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .container { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- القائمة العلوية -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Ohtmane Tech</a>
+            <nav>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">المقالات</a></li>
+                    <li><a href="#">من أنا</a></li>
+                    <li><a href="#">اتصل بي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم الترحيب -->
+    <section class="hero">
+        <h1>مرحباً بك في عالم التقنية</h1>
+        <p>أنا عثمان، أشارك هنا تجاربي في البرمجة، الأمن السيبراني، وتطوير التطبيقات. انضم إلي في رحلة التعلم.</p>
+    </section>
+    <!-- محتوى المدونة -->
+    <main class="container">
+        <div class="blog-grid">
+            
+            <!-- المقال الأول -->
+            <article class="post-card">
+                <!-- يمكنك استبدال الرابط بصورة حقيقية لاحقاً -->
+                <img src="https://via.placeholder.com/400x200/2563eb/ffffff?text=Coding" alt="صورة المقال" class="post-image">
+                <div class="post-content">
+                    <span class="post-date">15 أبريل 2026</span>
+                    <h2 class="post-title">كيف تبدأ تعلم البرمجة من الصفر؟</h2>
+                    <p class="post-excerpt">خطوات بسيطة وعملية للمبتدئين للدخول إلى عالم تطوير الويب وتطبيقات الأندرويد...</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+            </article>
+
+            <!-- المقال الثاني -->
+            <article class="post-card">
+                <img src="https://via.placeholder.com/400x200/1e293b/ffffff?text=Security" alt="صورة المقال" class="post-image">
+                <div class="post-content">
+                    <span class="post-date">10 أبريل 2026</span>
+                    <h2 class="post-title">أساسيات الأمن السيبراني</h2>
+                    <p class="post-excerpt">لماذا يعتبر حماية بياناتك أمراً ضرورياً؟ وكيف تحمي نفسك أثناء التصفح؟</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+            </article>
+
+            <!-- المقال الثالث -->
+            <article class="post-card">
+                <img src="https://via.placeholder.com/400x200/64748b/ffffff?text=Linux" alt="صورة المقال" class="post-image">
+                <div class="post-content">
+                    <span class="post-date">5 أبريل 2026</span>
+                    <h2 class="post-title">تجربتي مع لينكس و Termux</h2>
+                    <p class="post-excerpt">كيف تحول هاتفك إلى بيئة تطوير متكاملة باستخدام أدوات مفتوحة المصدر.</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 Ohtmane Tech</p>
+    </footer>
+
+</body>
+  </html>
