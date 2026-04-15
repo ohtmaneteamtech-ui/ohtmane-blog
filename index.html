@@ -3,171 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohtmane Tech | المدونة الشخصية</title>
-    <!-- استدعاء خط عربي جميل من Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Ohtmane Tech | شروحات وحلول تقنية</title>
+    <!-- خط Cairo للعربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* إعدادات عامة */
         :root {
-            --primary-color: #2563eb; /* لون أزرق عصري */
-            --bg-color: #f8fafc;      /* خلفية فاتحة جداً */
-            --card-bg: #ffffff;       /* خلفية البطاقات */
-            --text-color: #1e293b;    /* لون النص */
-            --secondary-text: #64748b; /* لون النص الثانوي */
+            --primary-color: #0f172a; /* كحلي غامق */
+            --accent-color: #3b82f6;  /* أزرق ساطع */
+            --bg-color: #f1f5f9;      /* رمادي فاتح جداً للخلفية */
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-light: #64748b;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Cairo', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            color: var(--text-main);
+            line-height: 1.7;
         }
 
-        /* تنسيق الهيدر (القائمة العلوية) */
+        /* Header Styles */
         header {
             background-color: var(--card-bg);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             padding: 1rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
         }
 
         .container {
             width: 90%;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-size: 1.6rem;
+            font-weight: 800;            color: var(--primary-color);
             text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 10px;
         }
 
+        .logo span { color: var(--accent-color); }
+
+        nav ul { list-style: none; display: flex; gap: 25px; }
+        
         nav a {
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
+            color: var(--text-main);
+            font-weight: 600;
+            transition: 0.3s;
         }
 
-        nav a:hover {
-            color: var(--primary-color);
-        }
+        nav a:hover { color: var(--accent-color); }
 
-        /* قسم الترحيب (Hero Section) */
+        /* Hero Section */
         .hero {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                        url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
-            margin-bottom: 2rem;
+            text-align: center;
+            padding: 6rem 1rem;
+            margin-bottom: 3rem;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+        /* Blog Grid */
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);            margin: 10px auto 0;
+            border-radius: 2px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* شبكة المقالات */
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             padding-bottom: 4rem;
         }
 
-        /* بطاقة المقال */
         .post-card {
             background: var(--card-bg);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .post-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
         }
 
         .post-image {
             width: 100%;
-            height: 200px;
-            background-color: #ddd; /* لون مؤقت بدل الصورة */
+            height: 220px;
             object-fit: cover;
         }
 
-        .post-content {
-            padding: 1.5rem;
-        }
+        .post-content { padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column; }
 
-        .post-date {
+        .post-meta {
             font-size: 0.85rem;
-            color: var(--secondary-text);
+            color: var(--accent-color);
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            display: block;
+            text-transform: uppercase;
         }
 
         .post-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            line-height: 1.4;
         }
 
-        .post-excerpt {
-            color: var(--secondary-text);
-            font-size: 0.95rem;
+        .post-excerpt {            color: var(--text-light);
             margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            flex-grow: 1;
         }
 
-        .read-more {
+        .btn-read {
             display: inline-block;
-            padding: 8px 16px;            background-color: var(--primary-color);
+            padding: 10px 20px;
+            background-color: var(--primary-color);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            border-radius: 8px;
+            font-weight: 600;
             transition: background 0.3s;
+            text-align: center;
         }
 
-        .read-more:hover {
-            background-color: #1d4ed8;
+        .btn-read:hover { background-color: var(--accent-color); }
+
+        /* About Section */
+        .about-section {
+            background: white;
+            padding: 4rem 0;
+            text-align: center;
         }
 
-        /* الفوتر (تذييل الصفحة) */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
         footer {
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
             padding: 2rem;
-            background-color: var(--card-bg);
-            border-top: 1px solid #e2e8f0;
             margin-top: auto;
         }
 
-        /* للتجاوب مع الهواتف الصغيرة */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .container { flex-direction: column; gap: 15px; }
         }
@@ -175,71 +194,88 @@
 </head>
 <body>
 
-    <!-- القائمة العلوية -->
-    <header>
+    <!-- Header -->    <header>
         <div class="container">
-            <a href="#" class="logo">Ohtmane Tech</a>
+            <a href="#" class="logo">Ohtmane <span>Tech</span></a>
             <nav>
                 <ul>
                     <li><a href="#">الرئيسية</a></li>
-                    <li><a href="#">المقالات</a></li>
-                    <li><a href="#">من أنا</a></li>
-                    <li><a href="#">اتصل بي</a></li>
+                    <li><a href="#articles">المقالات</a></li>
+                    <li><a href="#about">من أنا</a></li>
+                    <li><a href="#">تواصل معي</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- قسم الترحيب -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>مرحباً بك في عالم التقنية</h1>
-        <p>أنا عثمان، أشارك هنا تجاربي في البرمجة، الأمن السيبراني، وتطوير التطبيقات. انضم إلي في رحلة التعلم.</p>
+        <h1>مرحباً بك في عالم التقنية والبرمجة</h1>
+        <p>مدونة Ohtmane Tech هي وجهتك لاستكشاف حلول البرمجة، شروحات لينكس، ونصائح الأمن السيبراني بأسلوب مبسط وعملي.</p>
     </section>
-    <!-- محتوى المدونة -->
-    <main class="container">
+
+    <!-- Main Content -->
+    <main class="container" id="articles">
+        <h2 class="section-title">أحدث الشروحات والحلول</h2>
+        
         <div class="blog-grid">
             
-            <!-- المقال الأول -->
+            <!-- Article 1: Python -->
             <article class="post-card">
-                <!-- يمكنك استبدال الرابط بصورة حقيقية لاحقاً -->
-                <img src="https://via.placeholder.com/400x200/2563eb/ffffff?text=Coding" alt="صورة المقال" class="post-image">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Python Code" class="post-image">
                 <div class="post-content">
-                    <span class="post-date">15 أبريل 2026</span>
-                    <h2 class="post-title">كيف تبدأ تعلم البرمجة من الصفر؟</h2>
-                    <p class="post-excerpt">خطوات بسيطة وعملية للمبتدئين للدخول إلى عالم تطوير الويب وتطبيقات الأندرويد...</p>
-                    <a href="#" class="read-more">اقرأ المزيد</a>
+                    <span class="post-meta">برمجة • Python</span>
+                    <h3 class="post-title">كيف تبدأ تعلم بايثون في 2026؟</h3>
+                    <p class="post-excerpt">
+                        لغة بايثون هي البوابة الأسهل لعالم البرمجة. في هذا المقال، نستعرض خارطة طريق كاملة للمبتدئين تشمل أفضل المصادر المجانية ومشاريع التطبيق الأولى.
+                    </p>
+                    <a href="#" class="btn-read">اقرأ الشرح الكامل</a>
                 </div>
             </article>
 
-            <!-- المقال الثاني -->
+            <!-- Article 2: Linux/Termux -->
             <article class="post-card">
-                <img src="https://via.placeholder.com/400x200/1e293b/ffffff?text=Security" alt="صورة المقال" class="post-image">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Linux Terminal" class="post-image">
                 <div class="post-content">
-                    <span class="post-date">10 أبريل 2026</span>
-                    <h2 class="post-title">أساسيات الأمن السيبراني</h2>
-                    <p class="post-excerpt">لماذا يعتبر حماية بياناتك أمراً ضرورياً؟ وكيف تحمي نفسك أثناء التصفح؟</p>
-                    <a href="#" class="read-more">اقرأ المزيد</a>
-                </div>
-            </article>
+                    <span class="post-meta">نظام تشغيل • Linux</span>
+                    <h3 class="post-title">تحويل هاتفك إلى بيئة تطوير باستخدام Termux</h3>
+                    <p class="post-excerpt">
+                        هل تعلم أن هاتفك يمكن أن يصبح كمبيوتر لينكس كامل؟ شرح خطوة بخطوة لتثبيت الأدوات الأساسية مثل Git و Nano وتشغيل سكربتات بايثون مباشرة على الأندرويد.
+                    </p>
+                    <a href="#" class="btn-read">اقرأ الشرح الكامل</a>
+                </div>            </article>
 
-            <!-- المقال الثالث -->
+            <!-- Article 3: Cybersecurity -->
             <article class="post-card">
-                <img src="https://via.placeholder.com/400x200/64748b/ffffff?text=Linux" alt="صورة المقال" class="post-image">
+                <img src="https://images.unsplash.com/photo-1563206767-5b1d972e9fb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cyber Security" class="post-image">
                 <div class="post-content">
-                    <span class="post-date">5 أبريل 2026</span>
-                    <h2 class="post-title">تجربتي مع لينكس و Termux</h2>
-                    <p class="post-excerpt">كيف تحول هاتفك إلى بيئة تطوير متكاملة باستخدام أدوات مفتوحة المصدر.</p>
-                    <a href="#" class="read-more">اقرأ المزيد</a>
+                    <span class="post-meta">أمن سيبراني • حماية</span>
+                    <h3 class="post-title">5 خطوات لحماية حساباتك من الاختراق</h3>
+                    <p class="post-excerpt">
+                        الأمن السيبراني ليس فقط للمحترفين. تعلم كيف تستخدم المصادقة الثنائية (2FA) وكيفية اكتشاف رسائل التصيد الاحتيالي لحماية بياناتك الشخصية بشكل فعال.
+                    </p>
+                    <a href="#" class="btn-read">اقرأ الشرح الكامل</a>
                 </div>
             </article>
 
         </div>
     </main>
 
-    <!-- الفوتر -->
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2 class="section-title">من هو Ohtmane Tech؟</h2>
+            <p>
+                أنا عثمان، مطور ومهتم بمجال التكنولوجيا. أسعى من خلال هذه المدونة إلى توثيق رحلتي التعليمية ومشاركة الحلول التقنية التي أكتشفها يومياً. هدفي هو تبسيط المفاهيم المعقدة في البرمجة والأمن السيبراني للجميع.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 Ohtmane Tech</p>
+        <p>&copy; 2026 Ohtmane Tech. جميع الحقوق محفوظة.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">تم التطوير بشغف ❤️</p>
     </footer>
 
 </body>
-  </html>
+                </html>
