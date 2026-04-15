@@ -3,81 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كيف تبدأ تعلم بايثون في 2026؟ | Ohtmane Tech</title>
+    <title>كورس بايثون للمبتدئين | Ohtmane Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- نفس التنسيقات الأساسية للحفاظ على الهوية -->
     <style>
-        :root { --primary-color: #0f172a; --accent-color: #3b82f6; --bg-color: #f1f5f9; --card-bg: #ffffff; --text-main: #334155; }
+        :root { --primary-color: #0f172a; --accent-color: #10b981; /* لون أخضر للنجاح والمال */ --bg-color: #f8fafc; --text-main: #334155; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Cairo', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.8; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
         
-        /* Header & Footer same as main page */
-        header { background: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .container { width: 90%; max-width: 800px; margin: 0 auto; }
+        header { background: white; padding: 1rem 0; text-align: center; border-bottom: 1px solid #e2e8f0; }
         .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
-        footer { background: var(--primary-color); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-
-        /* Article Styles */
-        .article-header { background: white; padding: 3rem 0; text-align: center; border-bottom: 1px solid #e2e8f0; }
-        .article-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1rem; }
-        .article-meta { color: #64748b; font-size: 0.9rem; }
         
-        .article-content { background: white; padding: 2.5rem; margin-top: -2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .article-content h2 { color: var(--accent-color); margin: 2rem 0 1rem; font-size: 1.5rem; }
-        .article-content p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .course-container { max-width: 800px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
         
-        /* Code Block Styling */
-        pre { background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px; overflow-x: auto; direction: ltr; text-align: left; margin: 1.5rem 0; font-family: 'Courier New', monospace; }
-        code { font-family: inherit; }
+        .course-header { text-align: center; margin-bottom: 2rem; }
+        .price-tag { display: inline-block; background: var(--accent-color); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem; }
         
-        .back-btn { display: inline-block; margin-top: 2rem; padding: 10px 20px; background: var(--accent-color); color: white; text-decoration: none; border-radius: 6px; }
+        .features-list { list-style: none; margin: 2rem 0; }
+        .features-list li { margin-bottom: 10px; padding-right: 25px; position: relative; }
+        .features-list li::before { content: '✔'; color: var(--accent-color); position: absolute; right: 0; font-weight: bold; }
+        
+        .buy-btn { display: block; width: 100%; padding: 15px; background: var(--accent-color); color: white; text-align: center; text-decoration: none; font-size: 1.2rem; font-weight: bold; border-radius: 8px; transition: 0.3s; margin-top: 2rem; }
+        .buy-btn:hover { background: #059669; transform: scale(1.02); }
+        
+        .guarantee { text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 1rem; }
+        
+        footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <a href="index.html" class="logo">Ohtmane Tech</a>
-        </div>
+        <a href="index.html" class="logo">Ohtmane Tech</a>
     </header>
 
-    <div class="article-header">
-        <div class="container">
-            <h1 class="article-title">كيف تبدأ تعلم بايثون في 2026؟</h1>
-            <p class="article-meta">نشر في: 15 أبريل 2026 | تصنيف: برمجة</p>
+    <div class="course-container">
+        <div class="course-header">
+            <span class="price-tag">سعر خاص: $1.00 فقط</span>
+            <h1>كورس بايثون الشامل للمبتدئين 2026</h1>
+            <p>ابدأ رحلتك في البرمجة من الصفر حتى بناء تطبيقاتك الأولى. محتوى عملي، مبسط، ومجرب على هاتفك الأندرويد.</p>
         </div>
+
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Python Course" style="width:100%; border-radius:8px; margin-bottom:20px;">
+
+        <h3>ماذا ستتعلم في هذا الكورس؟</h3>
+        <ul class="features-list">
+            <li>تثبيت بيئة التطوير على هاتفك باستخدام Termux (بدون حاسوب).</li>
+            <li>أساسيات لغة بايثون: المتغيرات، الشروط، والحلقات التكرارية.</li>
+            <li>بناء أول مشروع لك: آلة حاسبة ذكية.</li>
+            <li>مقدمة في الأمن السيبراني باستخدام بايثون.</li>
+            <li>ملفات PDF وشروحات فيديو مسجلة بجودة عالية.</li>
+        </ul>
+
+        <!-- هنا ستضع رابط الدفع الخاص بك -->
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUR_EMAIL_HERE&item_name=Python Course&amount=1.00&currency_code=USD" class="buy-btn">
+            اشترِ الكورس الآن وابدأ التعلم 🚀
+        </a>
+        
+        <p class="guarantee">🔒 دفع آمن 100% | تسليم فوري للملفات بعد الدفع</p>
     </div>
-
-    <main class="container">
-        <article class="article-content">
-            <p>لغة بايثون (Python) تعتبر من أسهل اللغات للمبتدئين وأكثرها قوة في نفس الوقت. سواء كنت تريد تطوير تطبيقات أندرويد، تحليل بيانات، أو دخول مجال الأمن السيبراني، فإن بايثون هي خطوتك الأولى.</p>
-
-            <h2>1. لماذا بايثون؟</h2>
-            <p>تتميز بايثون بقراءتها السهلة التي تشبه اللغة الإنجليزية، مما يجعل كتابة الأكواد أمراً ممتعاً وغير معقد. كما أنها تدعم مكتبات ضخمة جاهزة للاستخدام.</p>
-
-            <h2>2. أول كود لك</h2>
-            <p>لتجربة بايثون، يمكنك استخدام تطبيق Termux على هاتفك. بعد تثبيت بايثون عبر الأمر `pkg install python`، جرب كتابة هذا الكود البسيط:</p>
-
-<pre><code># هذا هو برنامجي الأول في بايثون
-name = "Ohtmane"
-print(f"مرحباً يا {name} في عالم البرمجة!")
-
-# عملية حسابية بسيطة
-x = 10
-y = 20
-print("المجموع هو:", x + y)</code></pre>
-
-            <h2>3. خارطة الطريق للمبتدئ</h2>
-            <ul>
-                <li><strong>الأساسيات:</strong> تعلم المتغيرات، الحلقات التكرارية (Loops)، والدوال (Functions).</li>
-                <li><strong>التطبيق:</strong> حاول بناء آلة حاسبة بسيطة أو لعبة تخمين الأرقام.</li>
-                <li><strong>المشاريع:</strong> انتقل لبناء أدوات صغيرة تساعدك في حياتك اليومية.</li>
-            </ul>
-
-            <a href="index.html" class="back-btn">← العودة للرئيسية</a>
-        </article>
-    </main>
 
     <footer>
         <p>&copy; 2026 Ohtmane Tech. جميع الحقوق محفوظة.</p>
