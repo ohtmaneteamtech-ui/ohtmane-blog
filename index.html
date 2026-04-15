@@ -18,6 +18,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .social-icon:hover { color: #818cf8; transform: translateY(-2px); transition: all 0.3s; }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 antialiased">
@@ -36,7 +37,10 @@
                     <a href="#home" class="hover:text-white transition-colors">الرئيسية</a>
                     <a href="#blog" class="hover:text-white transition-colors">المدونة</a>
                     <a href="#projects" class="hover:text-white transition-colors">المشاريع</a>
-                    <button class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-500 transition-colors">اتصل بي</button>
+                    <a href="https://wa.me/13684442364" target="_blank" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-500 transition-colors flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        تواصل معي
+                    </a>
                 </div>
             </div>
         </div>
@@ -49,80 +53,69 @@
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <span class="inline-block py-1 px-3 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-indigo-400 mb-6">متاح للمشاريع الجديدة</span>
                 <h1 class="text-5xl md:text-7xl font-bold mb-6">نبني <span class="gradient-text">مستقبل</span> التقنية</h1>
-                <p class="text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">أنا عثمان، مهندس برمجيات ومهتم بالتقنية. أشارككم رحلتي في عالم البرمجة، الابتكار، وتطوير الحلول الذكية.</p>
+                <p class="text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">أنا عثمان، مهندس برمجيات ومهتم بالتقنية. أشارككم رحلتي في عالم البرمجة والابتكار.</p>
+                
+                <!-- Social Links in Hero -->
+                <div class="flex justify-center gap-6 mb-10">
+                    <a href="https://youtube.com/@ohtman-tech?si=sSGKMw3h9AqFc9qX" target="_blank" class="social-icon"><i data-lucide="youtube"></i></a>
+                    <a href="https://www.instagram.com/otma_n5016?igsh=MWs2NjFjemQ3ZDV4Mw==" target="_blank" class="social-icon"><i data-lucide="instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586601994831" target="_blank" class="social-icon"><i data-lucide="facebook"></i></a>
+                    <a href="https://t.me/Ohtmanetech" target="_blank" class="social-icon"><i data-lucide="send"></i></a>
+                </div>
+
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="#blog" class="px-8 py-3 bg-white text-zinc-950 font-bold rounded-full hover:bg-zinc-200 transition-all flex items-center gap-2">اقرأ المدونة <i data-lucide="chevron-left" class="w-4 h-4"></i></a>
-                    <a href="#projects" class="px-8 py-3 bg-zinc-900 text-white font-bold rounded-full border border-zinc-800 hover:bg-zinc-800 transition-all">شاهد مشاريعي</a>
+                    <a href="https://wa.me/13684442364" target="_blank" class="px-8 py-3 bg-zinc-900 text-white font-bold rounded-full border border-zinc-800 hover:bg-zinc-800 transition-all flex items-center gap-2">واتساب <i data-lucide="message-circle" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- Blog Section -->
-        <section id="blog" class="py-20">
+        <section id="blog" class="py-20 bg-zinc-900/20">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="flex justify-between items-end mb-12">
-                    <div>
-                        <h2 class="text-3xl font-bold mb-2">آخر المقالات</h2>
-                        <p class="text-zinc-400">أفكار حول هندسة البرمجيات وصناعة التقنية.</p>
-                    </div>
-                </div>
+                <h2 class="text-3xl font-bold mb-12 text-center">آخر المقالات</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Post 1 -->
-                    <article class="group cursor-pointer">
-                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6">
-                            <img src="https://picsum.photos/seed/tech1/800/450" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">مستقبل تطوير الويب مع الذكاء الاصطناعي</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">كيف يغير الذكاء الاصطناعي التوليدي طريقة بناء التطبيقات الحديثة...</p>
+                    <article class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-indigo-500/50 transition-all">
+                        <img src="https://picsum.photos/seed/tech1/800/450" class="rounded-xl mb-4">
+                        <h3 class="text-xl font-bold mb-2">مستقبل الويب مع AI</h3>
+                        <p class="text-zinc-400 text-sm">كيف يغير الذكاء الاصطناعي طريقة بناء التطبيقات...</p>
                     </article>
-                    <!-- Post 2 -->
-                    <article class="group cursor-pointer">
-                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6">
-                            <img src="https://picsum.photos/seed/dev1/800/450" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">احتراف Tailwind CSS 4.0</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">استكشاف الميزات الجديدة وتحسينات الأداء في أحدث إصدار...</p>
+                    <article class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-indigo-500/50 transition-all">
+                        <img src="https://picsum.photos/seed/dev1/800/450" class="rounded-xl mb-4">
+                        <h3 class="text-xl font-bold mb-2">احتراف Tailwind CSS</h3>
+                        <p class="text-zinc-400 text-sm">أسرار التنسيق السريع والاحترافي للمواقع...</p>
                     </article>
-                    <!-- Post 3 -->
-                    <article class="group cursor-pointer">
-                        <div class="relative aspect-video rounded-2xl overflow-hidden mb-6">
-                            <img src="https://picsum.photos/seed/arch1/800/450" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">بناء Microservices قابلة للتوسع</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">أفضل الممارسات لتصميم ونشر معماريات الخدمات المصغرة...</p>
+                    <article class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-indigo-500/50 transition-all">
+                        <img src="https://picsum.photos/seed/arch1/800/450" class="rounded-xl mb-4">
+                        <h3 class="text-xl font-bold mb-2">الأمان في البرمجيات</h3>
+                        <p class="text-zinc-400 text-sm">خطوات أساسية لحماية تطبيقاتك من الثغرات...</p>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter -->
-        <section class="py-20">
-            <div class="max-w-3xl mx-auto px-4">
-                <div class="p-10 rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-indigo-900 text-center">
-                    <h2 class="text-3xl font-bold mb-4">ابقَ على اطلاع</h2>
-                    <p class="text-indigo-100 mb-8">احصل على آخر المقالات التقنية وتحديثات المشاريع مباشرة في بريدك.</p>
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <input type="email" placeholder="بريدك الإلكتروني" class="flex-1 px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-indigo-200 focus:outline-none">
-                        <button class="px-8 py-3 bg-white text-indigo-700 font-bold rounded-full hover:bg-indigo-50 transition-colors">اشترك الآن</button>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 border-t border-zinc-900 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="#" class="text-zinc-500 hover:text-white"><i data-lucide="twitter"></i></a>
-                <a href="#" class="text-zinc-500 hover:text-white"><i data-lucide="github"></i></a>
-                <a href="#" class="text-zinc-500 hover:text-white"><i data-lucide="linkedin"></i></a>
+    <!-- Footer -->
+    <footer class="py-16 border-t border-zinc-900 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <i data-lucide="terminal" class="w-6 h-6 text-indigo-500"></i>
+                <span class="text-xl font-bold">Ohtmane Tech</span>
             </div>
+            
+            <div class="flex justify-center gap-8 mb-10">
+                <a href="https://youtube.com/@ohtman-tech?si=sSGKMw3h9AqFc9qX" target="_blank" class="text-zinc-500 hover:text-white transition-all"><i data-lucide="youtube"></i></a>
+                <a href="https://www.instagram.com/otma_n5016?igsh=MWs2NjFjemQ3ZDV4Mw==" target="_blank" class="text-zinc-500 hover:text-white transition-all"><i data-lucide="instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61586601994831" target="_blank" class="text-zinc-500 hover:text-white transition-all"><i data-lucide="facebook"></i></a>
+                <a href="https://wa.me/13684442364" target="_blank" class="text-zinc-500 hover:text-white transition-all"><i data-lucide="message-circle"></i></a>
+                <a href="https://t.me/Ohtmanetech" target="_blank" class="text-zinc-500 hover:text-white transition-all"><i data-lucide="send"></i></a>
+            </div>
+
             <p class="text-zinc-500 text-sm">© 2024 Ohtmane Tech. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
     </script>
 </body>
